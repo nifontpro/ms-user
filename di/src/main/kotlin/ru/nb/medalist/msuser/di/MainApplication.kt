@@ -1,4 +1,4 @@
-package ru.nb.medalist.msuser.rest
+package ru.nb.medalist.msuser.di
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -9,11 +9,5 @@ import org.springframework.context.annotation.ComponentScan
 class MainApplication
 
 fun main(args: Array<String>) {
-	val ctx = runApplication<MainApplication>(*args)
-
-	println(
-		"""
-		count = ${ctx.beanDefinitionCount}
-	""".trimIndent()
-	)
+	runApplication<MainApplication>(*args)
 }

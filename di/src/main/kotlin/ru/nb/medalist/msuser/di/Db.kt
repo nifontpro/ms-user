@@ -6,7 +6,7 @@ import ru.nb.medalist.msuser.domain.TestData
 import ru.nb.medalist.msuser.db.TestDataImpl
 
 @Configuration
-class Di {
+class Db {
 
 	@Bean
 	fun store(): TestData {

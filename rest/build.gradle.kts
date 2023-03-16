@@ -1,19 +1,16 @@
 plugins {
-    id("java")
+    kotlin("jvm")
+    kotlin("plugin.spring")
+    id("org.springframework.boot")
 }
 
-group = "ru.nb.medalist"
-version = "1.0-SNAPSHOT"
-
-repositories {
-    mavenCentral()
-}
+java.sourceCompatibility = JavaVersion.VERSION_17
 
 dependencies {
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
-}
-
-tasks.getByName<Test>("test") {
-    useJUnitPlatform()
+    implementation(project(":ms-user:domain"))
+    implementation("org.springframework.boot:spring-boot-starter-webflux")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+    implementation("org.jetbrains.kotlin:kotlin-reflect")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
