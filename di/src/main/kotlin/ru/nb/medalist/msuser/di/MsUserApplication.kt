@@ -6,8 +6,8 @@ import org.springframework.context.annotation.ComponentScan
 
 @SpringBootApplication
 @ComponentScan(basePackages = ["ru.nb.medalist.msuser"])
-class MainApplication
+class MsUserApplication
 
 fun main(args: Array<String>) {
-	runApplication<MainApplication>(*args)
+	runApplication<MsUserApplication>(*args)
 }
