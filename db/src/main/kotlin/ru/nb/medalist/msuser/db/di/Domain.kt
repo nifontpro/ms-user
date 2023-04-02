@@ -1,4 +1,4 @@
-package ru.nb.medalist.msuser.di
+package ru.nb.medalist.msuser.db.di
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

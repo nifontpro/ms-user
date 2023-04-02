@@ -1,12 +1,14 @@
 plugins {
     kotlin("jvm")
     kotlin("plugin.spring")
+    id("io.spring.dependency-management")
     id("org.springframework.boot")
 }
 
 java.sourceCompatibility = JavaVersion.VERSION_17
 
 dependencies {
+    implementation(project(":base"))
     implementation(project(":ms-user:domain"))
 
     implementation("org.springframework.boot:spring-boot-starter-webflux")
